@@ -2,13 +2,10 @@ import java.util.ArrayList;
 
 public class Deck {
 
-	
-private String[] ranks;
-private String[]suits;
-private int[]values;
 ArrayList<Card> Undealt;
+ArrayList<Card> Dealt;
 
-public Deck(String[}ranks,String[]suits,int[]values)
+public Deck(String[]ranks,String[]suits,int[]values)
 {for (int x=0;x<ranks.length;x++)
  {for (int y=0;y<suits.length;y++)
   {
@@ -18,5 +15,39 @@ public Deck(String[}ranks,String[]suits,int[]values)
 	
 	
  }
+}
+
+public boolean isEmpty()
+{if (Undealt.size()==0)
+   {return true;}
+   else
+   {return false;}
+	
+}
+
+public int size()
+{return Undealt.size();
+	
+}
+
+public Card deal(int x)
+{
+  if (Undealt.size()>0)
+     {Card temp=new Card ("0","x",0);
+      Undealt.remove(x);
+      temp=Undealt.remove(x);
+      Dealt.add(temp);
+      return temp;
+ 	
+ }
+else
+ {return null;
+	
+ }
+	
+}
+public void Shuffle()
+{
+	
 }
 }

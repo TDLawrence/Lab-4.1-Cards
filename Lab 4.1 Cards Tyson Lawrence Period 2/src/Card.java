@@ -25,7 +25,21 @@ public class Card {
 		
 	}
 	
+	public boolean equals(Card othercard)
+	{   int z=this.getValue();
+		int x=othercard.getValue();
+		if(z==x)
+		{return true;}
+		else
+		{return false;}
+	 
+		
+	}
 	
+	public String toString()
+	{return "This is a"+this.getRank()+ " of" + this.getSuit()+". Its value is "+this.getValue();
+		
+	}
 	
 	
 	
