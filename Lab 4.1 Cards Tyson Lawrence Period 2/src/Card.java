@@ -37,7 +37,9 @@ public class Card {
 	}
 	
 	public String toString()
-	{return "This is a"+this.getRank()+ " of" + this.getSuit()+". Its value is "+this.getValue();
+	{   System.out.println();
+		return "This is a "+this.getRank()+ "  of " + this.getSuit()+". Its value is  "+this.getValue();
+	 
 		
 	}
 	
