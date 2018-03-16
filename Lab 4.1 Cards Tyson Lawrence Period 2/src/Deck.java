@@ -54,21 +54,19 @@ public void Shuffle()
   for(int f=size-1;f>=0;f--)
    {
       Card temp=new Card("1","2",3);
-      Dealt.remove(f);
       temp=Dealt.remove(f);
       Undealt.add(temp);   
    }
 	//Shuffles UnDealt ArrayList
   Random a=new Random();
   for (int k=51;k>0;k--)
-  {int random=a.nextInt(k);
-   Card placeholder=new Card("4","5",6);
-   Card randomcard=Undealt.get(random);
- placeholder=Undealt.get(k);
- placeholder=randomcard;
- 
- 
-	  
+  {
+	int random=a.nextInt(k);
+	Card placeholder=new Card("4","5",6);
+	Card randomcard=Undealt.get(random);
+	placeholder=Undealt.get(k);
+	Undealt.set(random, placeholder);
+	placeholder=Undealt.set(k, randomcard); 
   }
 }
 }
